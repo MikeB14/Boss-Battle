@@ -49,12 +49,12 @@ TextureImporter:
     21300088: adventurer-v1.5-Sheet_44
     21300090: adventurer-v1.5-Sheet_45
     21300092: adventurer-v1.5-Sheet_46
-    21300094: adventurer-v1.5-Sheet_47
-    21300096: adventurer-v1.5-Sheet_48
-    21300098: adventurer-v1.5-Sheet_49
-    21300100: adventurer-v1.5-Sheet_50
-    21300102: adventurer-v1.5-Sheet_51
-    21300104: adventurer-v1.5-Sheet_52
+    21300094: Attack2_0
+    21300096: Attack2_1
+    21300098: Atack2_2
+    21300100: Attack2_3
+    21300102: Attack2_4
+    21300104: Attack2_5
     21300106: adventurer-v1.5-Sheet_53
     21300108: adventurer-v1.5-Sheet_54
     21300110: adventurer-v1.5-Sheet_55
@@ -1170,7 +1170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_47
+      name: Attack2_0
       rect:
         serializedVersion: 2
         x: 265
@@ -1190,7 +1190,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_48
+      name: Attack2_1
       rect:
         serializedVersion: 2
         x: 315
@@ -1210,7 +1210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_49
+      name: Atack2_2
       rect:
         serializedVersion: 2
         x: 13
@@ -1230,7 +1230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_50
+      name: Attack2_3
       rect:
         serializedVersion: 2
         x: 60
@@ -1250,7 +1250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_51
+      name: Attack2_4
       rect:
         serializedVersion: 2
         x: 102
@@ -1270,7 +1270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_52
+      name: Attack2_5
       rect:
         serializedVersion: 2
         x: 152
