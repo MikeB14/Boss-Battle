@@ -37,7 +37,8 @@ public class PlayerAttack : MonoBehaviour {
     {
        yield return new WaitForSeconds(UltAttackTimer);
        UltAttackCount = 0;
-        Anim.SetBool("UltAttack", false);
+       Anim.SetBool("UltAttack", false);
+       // RB.gravityScale = 3;
     }
 
 
@@ -56,7 +57,7 @@ public class PlayerAttack : MonoBehaviour {
 
     private void Attack()
     {
-        if (Input.GetButtonDown("Fire1") && AttackCount == 0)
+        if (Input.GetButtonDown("Fire1") && AttackCount == 0 && UltAttackMeter == 10)
         {
             Anim.SetBool("Attack1", true);
             AttackCount = 1;
@@ -80,6 +81,7 @@ public class PlayerAttack : MonoBehaviour {
         {
            // RB.velocity = Vector2. * UltAttackSpeed;
             Anim.SetBool("UltAttack", true);
+            //RB.gravityScale = 0.5f;
             UltAttackCount = 1;
             StartCoroutine(ResetUltAttack());
         }

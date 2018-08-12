@@ -152,10 +152,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114039211248396222, guid: b3c7d7691cb416a428dd3fbb9f944b76,
+    - target: {fileID: 212384796467858736, guid: b3c7d7691cb416a428dd3fbb9f944b76,
         type: 2}
-      propertyPath: UltAttackTimer
-      value: 0.5
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212384796467858736, guid: b3c7d7691cb416a428dd3fbb9f944b76,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212384796467858736, guid: b3c7d7691cb416a428dd3fbb9f944b76,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c7d7691cb416a428dd3fbb9f944b76, type: 2}
