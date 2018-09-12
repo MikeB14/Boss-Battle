@@ -5,41 +5,46 @@ using UnityEngine.Animations;
 
 public class PlayerAttack : MonoBehaviour {
 
+    private Rigidbody2D RB;
+    private Animator Anim;
+
 
     #region RegAttacks
-    
-    private Animator Anim;
     public bool IsAttacking1 = false;
-    private int AttackCount = 0;
+    public int AttackCount = 0;
     public float Attack1Timer;
+    public float Attack2Timer;
+    public float Attack3Timer;
     #endregion
 
-    #region SpecAttacks
-    private Rigidbody2D RB;
-    public float UltAttackTimer;
-    private int UltAttackCount = 0;
-    public int UltAttackMeter = 0;
-   // public float UltAttackSpeed;
-    #endregion
+
 
 
     IEnumerator ResetAttack1()
     {
         yield return new WaitForSeconds(Attack1Timer);
         //IsAttacking1 = false;
-        AttackCount = 0;
+        //AttackCount = 0;
         Anim.SetBool("Attack1", false);
+        AttackCount = 0;
        // Anim.SetBool("Idle", true);
 
     }
 
-    IEnumerator ResetUltAttack()
+    IEnumerator ResetAttack2()
     {
-       yield return new WaitForSeconds(UltAttackTimer);
-       UltAttackCount = 0;
-       Anim.SetBool("UltAttack", false);
-       // RB.gravityScale = 3;
+        yield return new WaitForSeconds(Attack2Timer);
+        Anim.SetBool("Attack2", false);
     }
+
+    IEnumerator ResetAttack3()
+    {
+        yield return new WaitForSeconds(Attack3Timer);
+        Anim.SetBool("Attack3", false);
+        AttackCount = 0;
+    }
+
+ 
 
 
 	// Use this for initialization
@@ -52,12 +57,13 @@ public class PlayerAttack : MonoBehaviour {
 	void Update ()
     {
         Attack();
-        UltimateAttack();
+        ResetAttack();
+        AssistAttack();
     }
 
     private void Attack()
     {
-        if (Input.GetButtonDown("Fire1") && AttackCount == 0 && UltAttackMeter == 10)
+        if (Input.GetButtonDown("Fire1") && AttackCount == 0)
         {
             Anim.SetBool("Attack1", true);
             AttackCount = 1;
@@ -65,26 +71,46 @@ public class PlayerAttack : MonoBehaviour {
             // IsAttacking1 = true;
 
         }
+        /*
+        else if (Input.GetButtonDown("Fire1") && AttackCount == 1)
+        {
+            Anim.SetBool("Attack2", true);
+            AttackCount = 2;
+        }
+        else if (Input.GetButtonDown("Fire1") && AttackCount == 2)
+        {
+            Anim.SetBool("Attack3", true);
+            AttackCount = 3;
+        }
+        */
 
+        
+    }
+
+    private void ResetAttack()
+    {
         if (AttackCount == 1)
         {
             //Anim.SetBool("Attack1", false);
-            StartCoroutine(ResetAttack1());
 
+            StartCoroutine(ResetAttack1());
+        }
+        else if (AttackCount == 2)
+        {
+            StartCoroutine(ResetAttack2());
+        }
+        else if (AttackCount == 3)
+        {
+            StartCoroutine(ResetAttack3());
         }
     }
 
-
-    void UltimateAttack()
+    private void AssistAttack()
     {
-        if(Input.GetButtonDown("Fire2") && UltAttackCount == 0)
+        if (Input.GetButtonDown("Fire2"))
         {
-           // RB.velocity = Vector2. * UltAttackSpeed;
-            Anim.SetBool("UltAttack", true);
-            //RB.gravityScale = 0.5f;
-            UltAttackCount = 1;
-            StartCoroutine(ResetUltAttack());
+            Debug.Log("Assist Attack");
+            //Make assist attack later
         }
-
     }
 }

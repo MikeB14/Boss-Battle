@@ -319,9 +319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttacking1: 0
-  Attack1Timer: 0.00001
-  UltAttackTimer: 0.25
-  UltAttackMeter: 0
+  AttackCount: 0
+  Attack1Timer: 1
+  Attack2Timer: 0
+  Attack3Timer: 0
 --- !u!114 &114321785039693670
 MonoBehaviour:
   m_ObjectHideFlags: 1
