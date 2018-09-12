@@ -25,19 +25,21 @@ public class Attack1 : StateMachineBehaviour {
         {
             animator.SetBool("Attack1", true);
             //ResetTime++;
-            AttackCount = 1;
+            AttackCount = 0;
         }
-        
+        /*
         else if (Input.GetButtonDown("Fire1") && AttackCount == 1)
         {
             animator.SetBool("Attack2", true);
-            AttackCount = 2;
+            AttackCount = 0;
         }
+        
         else if(Input.GetButtonDown("Fire1") && AttackCount == 2)
         {
             animator.SetBool("Attack3", true);
             AttackCount = 0;
         }
+        */
 
 
   
