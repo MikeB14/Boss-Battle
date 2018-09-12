@@ -15,8 +15,8 @@ public class JumpAttack : StateMachineBehaviour {
         if(Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.Z))
         {
             animator.SetBool("JumpAttack", true);
-            animator.SetBool("DoubleJump", false);
-            animator.transform.Translate(0, -1, 0);
+           // animator.SetBool("DoubleJump", false);
+            //animator.transform.Translate(0, -2, 0);
             
         }
 	}

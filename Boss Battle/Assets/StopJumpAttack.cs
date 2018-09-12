@@ -19,7 +19,7 @@ public class StopJumpAttack : StateMachineBehaviour {
         if(WaitTime >= WaitTimeLimit)
         {
             animator.SetBool("JumpAttack", false);
-
+            WaitTime = 0;
         }
 	}
 
