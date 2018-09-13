@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.gameObject.tag == "Sword")
+        if(collision.transform.gameObject.tag == "Sword" && Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Damage Taken");
         }
