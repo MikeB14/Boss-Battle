@@ -13,7 +13,7 @@ namespace UnityStandardAssets._2D
 
         private void Awake()
         {
-            m_Character = GetComponent<PlatformerCharacter2D>();
+           // m_Character = GetComponent<PlatformerCharacter2D>();
         }
 
 
@@ -22,7 +22,7 @@ namespace UnityStandardAssets._2D
             if (!m_Jump)
             {
                 // Read the jump input in Update so button presses aren't missed.
-               // m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
         }
 

@@ -8,6 +8,7 @@ public class StopJumpAttack : StateMachineBehaviour {
     public int WaitTime = 0;
     public int WaitTimeLimit;
     private Rigidbody2D RB;
+    public float Speed;
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         RB = animator.GetComponent<Rigidbody2D>();
@@ -22,7 +23,8 @@ public class StopJumpAttack : StateMachineBehaviour {
             animator.SetBool("JumpAttack", false);
             WaitTime = 0;
         }
-        
+
+        RB.velocity = Vector2.down * Speed;
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
